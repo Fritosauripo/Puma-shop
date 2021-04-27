@@ -1,0 +1,34 @@
+$prime: #EE5514;
+$subprime: #FFE2D2;
+
+$accent: #81A8DA;
+
+$white: #FFFFFF;
+$black: #000000;
+
+@mixin poppins($weight) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin sourse-serif($weight) {
+  font-family: 'SourseSerif', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin r ($width) {
+  @media only screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
+
+@mixin t-clamp($lines, $line-height) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
